@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "Libro.h"
 
 using namespace std;
@@ -17,7 +18,7 @@ Libro::Libro(int i, string t, int n, string a):Material(i, t)
 
 void Libro::muestraDatos()
 {
-  cout << "El libro con ID "<<idMaterial<<" se titula "<<titulo<<" contiene "<<numPag<<" paginas y fue escrito por "<< autor <<"."<< endl;
+  cout << setw(15)<<"Libro"<< setw(10)<< idMaterial<< setw(15)<<numPag<< setw(20)<<autor<< setw(60)<<titulo << endl;
 }
 
 int Libro::cantidadDiasPrestamo()
