@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "Disco.h"
 
 using namespace std;
@@ -18,7 +19,7 @@ Disco::Disco(int i, string t, int d, string g): Material(i, t)
 
 void Disco::muestraDatos()
 {
-  cout << "El disco con ID "<<idMaterial<<" se titula "<<titulo<<" tiene una duracion de "<<duracion<<" minutos y fue su genero es "<< genero <<"."<< endl;
+  cout << setw(15)<<"Disco"<< setw(10)<< idMaterial<< setw(15)<<duracion<< setw(20)<<genero<< setw(60)<<titulo << endl;
 }
 
 int Disco::cantidadDiasPrestamo()
