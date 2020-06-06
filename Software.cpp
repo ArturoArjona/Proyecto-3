@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "Software.h"
 
 using namespace std;
@@ -17,7 +18,7 @@ Software::Software(int i, string t, int v, string s):Material(i, t)
 
 void Software::muestraDatos()
 {
-  cout << "El software con ID "<<idMaterial<<" se titula "<<titulo<<" su version es "<<version<<" y el sistema operativo en el que corre es "<< so <<"."<< endl;
+  cout << setw(15)<<"Software"<< setw(10)<< idMaterial<< setw(15)<<version<< setw(20)<<so<< setw(60)<<titulo << endl;
 }
 
 int Software::cantidadDiasPrestamo()
